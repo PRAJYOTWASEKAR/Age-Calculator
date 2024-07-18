@@ -49,12 +49,10 @@ input {
     font-size: 16px;
     background: rgba(255, 255, 255, 0.1);
     color: #fff;
-    position: relative;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
     filter: invert(1);
-    cursor: pointer;
 }
 
 button {
@@ -78,4 +76,27 @@ button:hover {
     font-size: 24px;
     font-weight: bold;
     color: #ffffff;
+}
+
+.contact {
+    margin-top: 30px;
+}
+
+.contact h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.contact a {
+    color: #00f;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
 }
