@@ -7,30 +7,25 @@ function calculateAge() {
     if (birthdayValue === "") {
         alert("Please enter your birthday");
     } else {
-        const ageDetails = getAgeDetails(birthdayValue);
-        resultEl.innerText = `Your age is ${ageDetails.years} ${ageDetails.years > 1 ? "years" : "year"}, ${ageDetails.months} ${ageDetails.months > 1 ? "months" : "month"}, and ${ageDetails.days} ${ageDetails.days > 1 ? "days" : "day"} old`;
+        const age = getAge(birthdayValue);
+        resultEl.innerText = `Your age is ${age} ${age > 1 ? "years" : "year"} old`;
     }
 }
 
-function getAgeDetails(birthdayValue) {
+function getAge(birthdayValue) {
     const currentDate = new Date();
     const birthdayDate = new Date(birthdayValue);
-    
-    let years = currentDate.getFullYear() - birthdayDate.getFullYear();
-    let months = currentDate.getMonth() - birthdayDate.getMonth();
-    let days = currentDate.getDate() - birthdayDate.getDate();
-    
-    if (days < 0) {
-        months -= 1;
-        days += new Date(currentDate.getFullYear(), currentDate.getMonth(), 0).getDate();
+    let age = currentDate.getFullYear() - birthdayDate.getFullYear();
+    const month = currentDate.getMonth() - birthdayDate.getMonth();
+
+    if (
+        month < 0 ||
+        (month === 0 && currentDate.getDate() < birthdayDate.getDate())
+    ) {
+        age--;
     }
-    
-    if (months < 0) {
-        years -= 1;
-        months += 12;
-    }
-    
-    return { years, months, days };
+
+    return age;
 }
 
 btnEl.addEventListener("click", calculateAge);
