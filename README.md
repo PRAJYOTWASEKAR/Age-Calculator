@@ -52,3 +52,18 @@ Age-Calculator/
 ├── style.css
 ├── index.js
 └── README.md
+```
+## Files
+- index.html: The main HTML file containing the structure of the web application.
+- style.css: The CSS file for styling the web application.
+- index.js: The JavaScript file for adding functionality to the web application.
+- README.md: The file you are currently reading, containing information about the project.
+
+## Contributions
+Contributions are welcome! If you have any suggestions or improvements, please feel free to create a pull request or open an issue.
+
+## License
+This project is open-source and available under the MIT License. See the LICENSE file for more information.
+
+## Contact
+If you have any questions or feedback, please reach out to me at prajyotwasekar.skn.entc@gmail.com.
